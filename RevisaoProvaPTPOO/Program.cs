@@ -12,21 +12,21 @@ namespace RevisaoProvaPTPOO
         {
 
             Random random = new Random();
-            int[] gabarito = new int[20], respostas = new int[20];
+            int[] gabarito = new int[5], respostas = new int[5];
             int matricula, acertos = 0;
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 5; i++)
             {
                 gabarito[i] = random.Next(1, 4);
-                Console.WriteLine("Gabarito: " + gabarito[i] + "\n");
+                Console.WriteLine("Gabarito: " + gabarito[i] + "\t");
             }
-
+            // Input da Primeira Matricula
             Console.WriteLine("Digite seu numero de matricula: ");
             matricula = int.Parse(Console.ReadLine());
 
-            while (matricula <= 999999)
+            while (matricula != 999999)
             {
-                for (int i = 0; i < 20; i++)
+                for (int i = 0; i < 5; i++)
                 {
                     Console.WriteLine("Questão nº " + i + ": ");
 
@@ -41,7 +41,7 @@ namespace RevisaoProvaPTPOO
 
                 Console.WriteLine("Numero da Matricula: " + matricula);
 
-                if (acertos >= 14)
+                if (acertos >= 3)
                 {
                     Console.WriteLine("Aprovado \n");
                 }
